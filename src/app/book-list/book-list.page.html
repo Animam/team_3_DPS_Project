@@ -1,19 +1,43 @@
 <ion-header>
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
-      <ion-back-button ></ion-back-button>
+      <ion-back-button defaultHref="/add-book"></ion-back-button>
     </ion-buttons>
     <ion-title>List Of Book</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="never"></ion-searchbar>
-</ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" showCancelButton="never" animated></ion-searchbar>
+  <div  class="table-responsive">
+    <table class="table table-bordered " >
+      <thead >
+        <tr  >
+          <th scope="col" class="text-truncate">id</th>
+          <th scope="col" class="text-truncate">Title</th>
+          <th scope="col" class="text-truncate">Author </th>
+          <th scope="col" class="text-truncate">Published Date</th>
+          <th scope="col" class="text-truncate">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let  identity of book | filter:searchTerm ; let i = index">
+          <th scope="row" class="text-truncate">{{i+1}} </th>
+          <td class="text-truncate">{{identity.titleInput}}</td>
+          <td class="text-truncate">{{identity.author}}</td>
+          <td class="text-truncate">{{identity.publisheddate}}</td>
+          <td class="text-truncate">
+            <ion-button color="danger" (click)="onDelete(i+1)"><ion-icon name="trash-outline"></ion-icon> Delte</ion-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> 
+ 
+  </ion-content>
 
 <ion-tab-bar color="secondary">
   <ion-tabs>
 
   </ion-tabs>
 </ion-tab-bar>
-

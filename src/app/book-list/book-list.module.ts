@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { BookListPageRoutingModule } from './book-list-routing.module';
 
 import { BookListPage } from './book-list.page';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BookListPageRoutingModule
+    BookListPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [BookListPage]
 })

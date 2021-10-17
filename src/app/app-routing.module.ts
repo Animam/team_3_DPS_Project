@@ -10,18 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-<<<<<<< HEAD
+  },
+  {
+
     path: 'book',
-    loadChildren: () => import('./book/book.module').then( m => m.BookPageModule)
-=======
-    path: 'add-book',
+    loadChildren: () => import('./book/book.module').then(m => m.BookPageModule)
+  },
+  {
+      path: 'add-book',
     loadChildren: () => import('./add-book/add-book.module').then( m => m.AddBookPageModule)
   },
   {
     path: 'book-list',
     loadChildren: () => import('./book-list/book-list.module').then( m => m.BookListPageModule)
->>>>>>> 376d4f4035a080718c46bae5008674f68898b931
   },
 
 ];

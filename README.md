@@ -13,6 +13,6 @@
 
 # open the terminal in the editor  and type ionic serve.
 
-# If  you faced some errors in the terminal but not an errors like npm, node.js , angular or ionic isn't install type "npm i" to fix them.
+# If  you faced some errors in the terminal but not an errors like npm, node.js , angular or ionic isn't installed type "npm i" to fix them.
 
 # Enjoy our application.
